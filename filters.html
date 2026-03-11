@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InternPath – Smart Filters</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="filters.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Intern<span>Path</span></a>
+    <ul>
+      <li><a href="jobs.html">Browse Jobs</a></li>
+      <li><a href="filters.html" class="nav-active">Filters</a></li>
+      <li><a href="company.html">For Companies</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="page-hero filters-hero">
+    <div class="page-hero-inner">
+      <div class="section-eyebrow">Advanced Search</div>
+      <h1 class="page-hero-title">Smart <em>Filters</em></h1>
+      <p class="page-hero-sub">Narrow down your perfect internship using multi-select filters across every dimension.</p>
+    </div>
+  </section>
+
+ 
+  <div class="filters-layout">
+
+    <aside class="filters-sidebar">
+
+      <div class="filter-block">
+        <div class="filter-block-title">🎓 Major</div>
+        <div class="filter-options" id="majorFilter">
+          <label class="filter-opt"><input type="checkbox" value="CSE" checked/><span>Computer Science (CSE)</span></label>
+          <label class="filter-opt"><input type="checkbox" value="ECE"/><span>Electronics &amp; Comm. (ECE)</span></label>
+          <label class="filter-opt"><input type="checkbox" value="MBA"/><span>Business &amp; MBA</span></label>
+          <label class="filter-opt"><input type="checkbox" value="Design"/><span>Design &amp; Creative</span></label>
+        </div>
+      </div>
+
+      <div class="filter-block">
+        <div class="filter-block-title">📍 Location</div>
+        <div class="filter-options" id="locationFilter">
+          <label class="filter-opt"><input type="checkbox" value="Remote"/><span>🌐 Remote</span></label>
+          <label class="filter-opt"><input type="checkbox" value="Hybrid"/><span>🏢 Hybrid</span></label>
+          <label class="filter-opt"><input type="checkbox" value="Onsite"/><span>🏙️ Onsite</span></label>
+          <label class="filter-opt"><input type="checkbox" value="Mumbai"/><span>Mumbai</span></label>
+          <label class="filter-opt"><input type="checkbox" value="Bangalore"/><span>Bangalore</span></label>
+          <label class="filter-opt"><input type="checkbox" value="Delhi"/><span>Delhi</span></label>
+          <label class="filter-opt"><input type="checkbox" value="Pune"/><span>Pune</span></label>
+          <label class="filter-opt"><input type="checkbox" value="Chennai"/><span>Chennai</span></label>
+          <label class="filter-opt"><input type="checkbox" value="Hyderabad"/><span>Hyderabad</span></label>
+        </div>
+      </div>
+
+      <div class="filter-block">
+        <div class="filter-block-title">⏱ Duration</div>
+        <div class="filter-options" id="durationFilter">
+          <label class="filter-opt"><input type="checkbox" value="2 months"/><span>2 Months</span></label>
+          <label class="filter-opt"><input type="checkbox" value="3 months"/><span>3 Months</span></label>
+          <label class="filter-opt"><input type="checkbox" value="6 months"/><span>6 Months</span></label>
+        </div>
+      </div>
+
+      <div class="filter-block">
+        <div class="filter-block-title">💰 Stipend Range</div>
+        <div class="stipend-range-wrap">
+          <input type="range" id="stipendRange" min="0" max="25000" step="1000" value="25000"/>
+          <div class="stipend-labels">
+            <span>₹0</span>
+            <span id="stipendVal">₹25,000+</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-block">
+        <div class="filter-block-title"> Extras</div>
+        <div class="filter-options" id="extrasFilter">
+          <label class="filter-opt"><input type="checkbox" value="cert"/><span>🎓Certificate Provided</span></label>
+          <label class="filter-opt"><input type="checkbox" value="featured"/><span>⭐ Featured Only</span></label>
+        </div>
+      </div>
+
+
+      <div class="filter-actions">
+        <button class="btn-apply-filters" id="applyFilters">Apply Filters </button>
+        <button class="btn-reset-filters" id="resetFilters">Reset All</button>
+      </div>
+
+
+    </aside>
+
+   
+    <main class="filters-results">
+      <div class="results-header">
+        <div class="result-count" id="resultCount">Showing <strong>12</strong> internships</div>
+        <select class="sort-select" id="sortSelect">
+          <option value="default">Sort: Default</option>
+          <option value="stipend-high">Stipend: High → Low</option>
+          <option value="stipend-low">Stipend: Low → High</option>
+          <option value="duration">Duration: Shortest first</option>
+        </select>
+      </div>
+      <div class="results-grid" id="resultsGrid"></div>
+      <div class="no-results" id="noResults" style="display:none;">
+        <div class="no-results-icon">🎯</div>
+        <h3>No matches found</h3>
+        <p>Try removing some filters to see more results.</p>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"><span id="toast-icon">✓</span><span id="toast-message">Applied!</span></div>
+
+  <footer>
+    <div class="footer-logo">Intern<span>Path</span></div>
+   
+    <div class="footer-copy">© 2025 InternPath · ITM Skills University · B.Tech CSE 2025–29</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

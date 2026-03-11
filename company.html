@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InternPath – For Companies</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="company.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Intern<span>Path</span></a>
+    <ul>
+      <li><a href="jobs.html">Browse Jobs</a></li>
+      <li><a href="filters.html">Filters</a></li>
+      <li><a href="company.html" class="nav-active">For Companies</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="company-hero">
+    <div class="company-hero-text">
+      <div class="section-eyebrow">Partner With Us</div>
+      <h1 class="company-hero-title">HIRE THE<br/><em>BEST</em><br/>TALENT</h1>
+      <p class="company-hero-sub">Post your internship and reach thousands of motivated students from India's top universities. Featured posts get <strong>5× more visibility.</strong></p>
+      <div class="company-hero-cta">
+        <button class="btn-primary" onclick="openPostForm()">Post an Internship </button>
+      </div>
+    </div>
+    <div class="company-hero-stats">
+      <div class="c-stat"><div class="c-stat-num">12,000+</div><div class="c-stat-label">Student Reach</div></div>
+      <div class="c-stat"><div class="c-stat-num">50+</div><div class="c-stat-label">Active Partners</div></div>
+      <div class="c-stat"><div class="c-stat-num">5×</div><div class="c-stat-label">Featured Visibility</div></div>
+      <div class="c-stat"><div class="c-stat-num">48hr</div><div class="c-stat-label">Avg. First Apply</div></div>
+    </div>
+  </section>
+
+
+  <section class="why-section">
+    <div class="section-eyebrow">Why InternPath</div>
+    <h2 class="section-h2">Built for companies that care about talent</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Targeted Reach</h3>
+        <p>Students filter by major and location — your listing lands in front of exactly the right candidates.</p>
+      </div>
+      <div class="why-card">
+        <h3>Fast Turnaround</h3>
+        <p>Average first application arrives within 48 hours of posting. Go live in under 5 minutes.</p>
+      </div>
+      <div class="why-card">
+        <h3>Certificate-Ready</h3>
+        <p>Mark your internship as certificate-issuing and attract the most motivated applicants.</p>
+      </div>
+      <div class="why-card">
+        <h3>Analytics Dashboard</h3>
+        <p>Track views, clicks, and applications in real-time. See what's working and optimise.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="pricing-section">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-h2">Simple, transparent pricing</h2>
+    <p class="section-p">Free for students, always. Companies pay only for featured visibility.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-badge">Basic</div>
+        <div class="pricing-price">Free</div>
+        <div class="pricing-desc">Perfect to get started</div>
+        <ul class="pricing-list">
+          <li>1 active listing</li>
+          <li>Standard visibility</li>
+          <li>Student applications</li>
+          <li>Basic analytics</li>
+          <li class="muted">✗ Featured badge</li>
+          <li class="muted">✗ Priority placement</li>
+        </ul>
+        <button class="btn-outline-pricing" onclick="openPostForm()">Get Started</button>
+      </div>
+      <div class="pricing-card featured-plan">
+        <div class="pricing-badge-featured">⭐ Featured</div>
+        <div class="pricing-price">₹999<span>/listing</span></div>
+        <div class="pricing-desc">Best for serious hiring</div>
+        <ul class="pricing-list">
+          <li>1 featured listing</li>
+          <li> 5× more visibility</li>
+          <li>Student applications</li>
+          <li>Full analytics</li>
+          <li> Featured badge</li>
+          <li>Priority placement</li>
+        </ul>
+        <button class="btn-accent-pricing" onclick="openPostForm('featured')">Post Featured </button>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-badge">Bundle</div>
+        <div class="pricing-price">₹2,499<span>/3 listings</span></div>
+        <div class="pricing-desc">For growing teams</div>
+        <ul class="pricing-list">
+          <li> 3 featured listings</li>
+          <li>5× more visibility each</li>
+          <li>Student applications</li>
+          <li>Full analytics</li>
+          <li>Featured badges</li>
+          <li>Priority placement</li>
+        </ul>
+        <button class="btn-outline-pricing" onclick="openPostForm('bundle')">Get Bundle</button>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="modal-overlay" id="modalOverlay" onclick="closePostForm(event)">
+    <div class="modal" id="postModal">
+      <button class="modal-close" onclick="closePostForm()">✕</button>
+      <div class="modal-header">
+        <div class="section-eyebrow">New Listing</div>
+        <h2 class="modal-title">Post an Internship</h2>
+      </div>
+      <form class="post-form" id="postForm" onsubmit="handlePostSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Company Name *</label>
+            <input type="text" id="f-company" placeholder="e.g. Google" required/>
+          </div>
+          <div class="form-group">
+            <label>Role / Title *</label>
+            <input type="text" id="f-title" placeholder="e.g. Frontend Developer Intern" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Major / Stream *</label>
+            <select id="f-major" required>
+              <option value="">Select major</option>
+              <option>CSE</option><option>ECE</option><option>MBA</option><option>Design</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Work Type *</label>
+            <select id="f-type" required>
+              <option value="">Select type</option>
+              <option>Remote</option><option>Hybrid</option><option>Onsite</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Location / City</label>
+            <input type="text" id="f-location" placeholder="e.g. Mumbai"/>
+          </div>
+          <div class="form-group">
+            <label>Duration *</label>
+            <select id="f-duration" required>
+              <option value="">Select duration</option>
+              <option>2 months</option><option>3 months</option><option>6 months</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Monthly Stipend (₹)</label>
+            <input type="number" id="f-stipend" placeholder="e.g. 12000" min="0"/>
+          </div>
+          <div class="form-group form-group-check">
+            <label class="check-label">
+              <input type="checkbox" id="f-cert"/>
+              <span>Provide Certificate</span>
+            </label>
+            <label class="check-label">
+              <input type="checkbox" id="f-featured"/>
+              <span>⭐ Featured Post (+₹999)</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label>Job Description</label>
+          <textarea id="f-desc" rows="4" placeholder="Describe the role, responsibilities, and required skills…"></textarea>
+        </div>
+        <div class="form-group full-width">
+          <label>Required Skills (comma separated)</label>
+          <input type="text" id="f-skills" placeholder="e.g. React, Node.js, Figma"/>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Submit Listing </button>
+          <button type="button" class="btn-cancel" onclick="closePostForm()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <section class="partners-section">
+    <div class="section-eyebrow">Our Partners</div>
+    <h2 class="section-h2">Trusted by leading companies</h2>
+    <div class="partners-strip" id="partnersStrip"></div>
+  </section>
+
+  <div id="toast" class="toast"><span id="toast-icon">✓</span><span id="toast-message">Done!</span></div>
+
+  <footer>
+    <div class="footer-logo">Intern<span>Path</span></div>
+    <div class="footer-copy">© 2025 InternPath · ITM Skills University · B.Tech CSE 2025–29</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

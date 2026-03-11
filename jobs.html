@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InternPath – Browse Jobs</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="jobs.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Intern<span>Path</span></a>
+    <ul>
+      <li><a href="jobs.html" class="nav-active">Browse Jobs</a></li>
+      <li><a href="filters.html">Filters</a></li>
+      <li><a href="company.html">For Companies</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="section-eyebrow">All Opportunities</div>
+      <h1 class="page-hero-title">Browse <em>Jobs</em></h1>
+      <p class="page-hero-sub">Explore every internship listing — filter by major, city, stipend, and more.</p>
+    </div>
+    
+    <div class="search-bar-wrap">
+      <div class="search-bar">
+        <span class="search-icon">⌕</span>
+        <input type="text" id="searchInput" placeholder="Search by role, company, or skill…" autocomplete="off"/>
+        <button class="search-clear" id="searchClear" title="Clear">✕</button>
+      </div>
+      <div class="result-count" id="resultCount">Showing <strong>12</strong> internships</div>
+    </div>
+  </section>
+
+
+  <div class="chip-bar" id="chipBar">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="CSE">💻 CSE</button>
+    <button class="chip" data-filter="ECE">⚡ ECE</button>
+    <button class="chip" data-filter="MBA">📊 MBA</button>
+    <button class="chip" data-filter="Design">🎨 Design</button>
+    <button class="chip" data-filter="Remote">🌐 Remote</button>
+    <button class="chip" data-filter="Hybrid">🏢 Hybrid</button>
+    <button class="chip" data-filter="Certificate">🎓 Certificate</button>
+  </div>
+
+
+  <main class="jobs-main">
+    <div class="jobs-grid" id="jobsGrid"></div>
+    <div class="no-results" id="noResults" style="display:none;">
+      <div class="no-results-icon">🔍</div>
+      <h3>No internships found</h3>
+      <p>Try adjusting your search or filters.</p>
+    </div>
+  </main>
+
+
+  <div id="toast" class="toast"><span id="toast-icon">✓</span><span id="toast-message">Applied!</span></div>
+
+  <footer>
+    <div class="footer-logo">Intern<span>Path</span></div>
+    
+    <div class="footer-copy">© 2025 InternPath · ITM Skills University · B.Tech CSE 2025–29</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternPath - Find Your Perfect Internship</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <nav>
+    <a href="#" class="logo">Intern<span>Path</span></a>
+    <ul>
+      <li><a href="#jobs">Browse Jobs</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#companies">For Companies</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="hero">
+    <div class="Side-image"><img src="./images/Background-image.png" alt="SideImage"></div>
+    <div class="hero-eyebrow">BUILT FOR INDIA'S NEXT GENERATION</div>
+    <h1 class="hero-title">FIND YOUR<br/><em>PERFECT</em><br/>INTERNSHIP</h1>
+    <p class="hero-sub">Discover thousands of internship opportunities tailored to your skills and interests. No sign-up. No hassle.</p>
+
+    <div class="stats-bar">
+      <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label">Active Internships</div></div>
+      <div class="stat-item"><div class="stat-num">50+</div><div class="stat-label">Partner Companies</div></div>
+      <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Cities Covered</div></div>
+      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Free for Students</div></div>
+      <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Majors Supported</div></div>
+    </div>
+  </section>
+
+
+  <section class="how-section" id="how">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-h2">Get hired in 4 simple steps</h2>
+    <p class="section-p">No sign-up required. Just filter, find, and apply to internships that match you.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+
+        <div class="step-title">Select Your Major</div>
+        <div class="step-desc">Choose from CSE, ECE, MBA, or Design to see internships relevant to your field of study.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+    
+        <div class="step-title">Pick Your Location</div>
+        <div class="step-desc">Filter by city or choose Remote/Hybrid options to find internships that fit your lifestyle.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+ 
+        <div class="step-title">Apply Smart Filters</div>
+        <div class="step-desc">Use multi-select filters for duration, stipend range, certificate availability, and more.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+       
+        <div class="step-title">Apply Instantly</div>
+        <div class="step-desc">One-click apply to your shortlisted internships. Get certificate confirmation upfront.</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="featured-section" id="jobs">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Featured Picks</div>
+        <h2 class="section-h2">Top internships this week</h2>
+      </div>
+      <a href="jobs.html" class="view-all" onclick="window.location.href='jobs.html'; return false;">View All 12 →</a>
+    </div>
+    <div class="featured-grid" id="featuredGrid"></div>
+  </section>
+
+
+  <section class="majors-section">
+    <div class="section-eyebrow">Browse by Major</div>
+    <h2 class="section-h2">What's your field?</h2>
+    <p class="section-p">We have curated internships for every stream. Click to filter instantly.</p>
+    <div class="majors-grid">
+      <a href="#" class="major-card" onclick="handleMajorClick(event,'CSE')">
+        <div class="major-name">Computer Science</div>
+        <div class="major-count">4 internships</div>
+      </a>
+      <a href="#" class="major-card" onclick="handleMajorClick(event,'ECE')">
+
+        <div class="major-name">Electronics &amp; Comm.</div>
+        <div class="major-count">2 internships</div>
+      </a>
+      <a href="#" class="major-card" onclick="handleMajorClick(event,'MBA')">
+
+        <div class="major-name">Business &amp; MBA</div>
+        <div class="major-count">3 internships</div>
+      </a>
+      <a href="#" class="major-card" onclick="handleMajorClick(event,'Design')">
+        <div class="major-name">Design &amp; Creative</div>
+        <div class="major-count">3 internships</div>
+      </a>
+    </div>
+  </section>
+
+  
+  <div class="cta-banner" id="companies">
+    <div class="cta-text">
+      <h2>Are you a company?</h2>
+      <p>Post your internship listing and reach thousands of motivated students. Featured posts get 5× more visibility.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="company.html" class="btn-accent">Post an Internship</a>
+      <a href="#jobs" class="btn-ghost">Browse as Student</a>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer-logo">Intern<span>Path</span></div>
+    
+    <div class="footer-copy">© 2025 InternPath · ITM Skills University · B.Tech CSE 2025–29</div>
+  </footer>
+
+
+  <div id="toast" class="toast">
+    <span id="toast-icon">✓</span>
+    <span id="toast-message">Filter Applied!</span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
