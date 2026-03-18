@@ -1479,17 +1479,29 @@ input[type="range"]::-webkit-slider-thumb {
   gap: .7rem;
   transition: background .2s;
 }
-.pricing-card:hover { background: #2a2a2a; }
-.featured-plan { background: #1a2a08; border: 2px solid var(--color-yellow); }
-.featured-plan:hover { background: #1e3009; }
+.pricing-card:hover { 
+  background: #2a2a2a; 
+}
+.featured-plan { background: #232323;
+   border: 2px solid var(--color-yellow);
+   }
+.featured-plan:hover { 
+  background:#2a2a2a ; 
+}
 
 .pricing-badge {
-  font-size: .68rem; font-weight: 700; letter-spacing: .15em;
-  text-transform: uppercase; color: rgba(255,255,255,.4);
+  font-size: .68rem;
+   font-weight: 700; 
+   letter-spacing: .15em;
+  text-transform: uppercase; 
+  color: rgba(255,255,255,.4);
 }
 .pricing-badge-featured {
-  font-size: .68rem; font-weight: 700; letter-spacing: .15em;
-  text-transform: uppercase; color: var(--color-yellow);
+  font-size: .68rem;
+   font-weight: 1000; 
+   letter-spacing: .15em;
+  text-transform: uppercase; 
+  color: var(--color-cta);
 }
 .pricing-price {
   font-family: var(--font-display);
